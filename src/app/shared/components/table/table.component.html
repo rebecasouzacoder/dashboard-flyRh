@@ -1,0 +1,44 @@
+<table class="table" *ngIf="!empty">
+    <thead class="thead-yellow">
+      <tr>
+        <th scope="col" *ngFor="let column of columns">{{ column.header }}</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="loading">
+      <tr>
+        <td  *ngFor="let column of columns">
+            <ngx-skeleton-loader [theme]="{height: '30px', background: '#dae1e7'}" />
+        </td>
+      </tr>
+    </tbody>
+    <tbody *ngIf="!loading">
+        <tr *ngFor="let row of rowData">
+            <td  *ngFor="let column of columns" [class.action-colum]="column.actions">
+            <span *ngIf="!column.actions">{{ formatField(row[column.field], column.type) }}</span>
+            <span *ngIf="column.actions && column.actionType === 'edit'">
+                <nb-icon icon="edit-2-outline" (click)="editEvent.emit(row)"></nb-icon>
+            </span>
+            <span *ngIf="column.actions && column.actionType === 'delete'">
+                <nb-icon icon="trash-2-outline" (click)="deleteEvent.emit(row)"></nb-icon>
+            </span>
+         </td>
+          </tr>
+    </tbody>
+  </table>
+
+  <nb-card *ngIf="empty">
+    <nb-card-body>
+    <div class="row d-flex justify-content-center">
+        <div class="col-2 p-0">
+            <img src="assets/icons/empty.svg" alt="" class="w-100">
+        </div>
+        <div class="col-auto d-flex align-items-center justify-content-center">
+            <div>
+                <h6>Não encontramos resultados para a sua busca</h6>
+            <p>Tente refazer a busca utilizando novos filtros</p>
+            </div>
+        </div>
+    </div>
+    </nb-card-body>
+  </nb-card>
+  

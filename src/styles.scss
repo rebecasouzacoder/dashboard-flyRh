@@ -1,0 +1,142 @@
+@import 'themes';
+
+@import '@nebular/theme/styles/globals';
+
+@include nb-install() {
+  @include nb-theme-global();
+};
+
+
+.w-100 {
+  min-width: 100%;
+}
+
+:root {
+  --primary: #37023A;
+  --secondary-50: #FFCA1D;
+  --secondary-100: #f4f6f8;
+  --secondary-200: #eef1f4;
+  --secondary-300: #e6ebef;
+  --secondary-400: #e1e7ec;
+  --secondary-500: #dae1e7;
+  --secondary-600: #c6cdd2;
+  --secondary-700: #9ba0a4;
+  --secondary-800: #787c7f;
+  --secondary-900: #5c5f61;
+  --complementary-50: #f4f9fb;
+  --complementary-100: #dcecf2;
+  --complementary-200: #cbe2eb;
+  --complementary-300: #b3d5e2;
+  --complementary-400: #a4cddd;
+  --complementary-500: #8dc1d4;
+  --complementary-600: #80b0c1;
+  --complementary-700: #648997;
+  --complementary-800: #4e6a75;
+  --complementary-900: #3b5159;
+  --neutral-300: #ffffff;
+  --neutral-400: #e8e8e8;
+  --neutral-500: #b5b5b5;
+  --neutral-600: #8c8c8c;
+  --neutral-700: #545454;
+  --neutral-800: #333333;
+  --neutral-900: #000000;
+  --danger-50: #fae6e8;
+  --danger-100: #f0b0b9;
+  --danger-200: #e88a97;
+  --danger-300: #de5467;
+  --danger-400: #d73349;
+  --danger-500: #cd001c;
+  --danger-600: #bb0019;
+  --danger-700: #920014;
+  --danger-800: #71000f;
+  --danger-900: #56000c;
+  --warning-50: #fefaee;
+  --warning-100: #fdf0ca;
+  --warning-200: #fce8b1;
+  --warning-300: #fbde8d;
+  --warning-400: #fad777;
+  --warning-500: #f9cd55;
+  --warning-600: #e3bb4d;
+  --warning-700: #b1923c;
+  --warning-800: #89712f;
+  --warning-900: #695624;
+  --success-50: #ebf6ed;
+  --success-100: #c1e4c8;
+  --success-200: #a3d7ae;
+  --success-300: #79c488;
+  --success-400: #5fb971;
+  --success-500: #37a74e;
+  --success-600: #329847;
+  --success-700: #277737;
+  --success-800: #1e5c2b;
+  --success-900: #174621;
+}
+
+
+.clr-primary {
+  color: var(--primary)!important;
+}
+
+.clr-white {
+  color: var(--neutral-300);
+}
+
+.bg-primary {
+  background-color: var(--primary)!important;
+}
+
+.bg-white {
+  background-color: var(--neutral-300)!important;
+}
+
+.clr-error {
+  color: var(--danger-500);
+}
+
+.clr-warning {
+  color: var(--warning-600);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.txt-end {
+  text-align: end;
+}
+
+.txt-start {
+  text-align: start;
+}
+
+.table-action-btn {
+  max-width: 5px;
+}
+
+.mr-2 {
+  margin-right: 1.5rem;
+}
+.mr-1 {
+  margin-right: 0.5rem;
+}
+
+
+::ng-deep angular-editor-toolbar button i {
+  font-family: FontAwesome !important; 
+  } 
+
+  .rounded-circle {
+    border-radius: 50%;
+  }
+
+  .w-100 {
+    width: 100%;
+  }
+
+  .border-primary {
+    border-color: var(--primary)!important;
+  }

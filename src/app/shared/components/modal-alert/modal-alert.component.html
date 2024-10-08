@@ -1,0 +1,18 @@
+<nb-card>
+    <nb-card-body *ngIf="type === 'delete'">
+       <div class="row d-flex justify-content-center">
+        <div class="col-10">
+           <div class="text-center">
+            <img src="assets/icons/alert.svg" alt="">
+            <h6>Tem a certeza ?</h6>
+          
+           </div>
+           <p>Esta ação não pode ser desfeita e o item será removido permanentemente.</p>
+        </div>
+       </div>
+    </nb-card-body>
+    <nb-card-footer class="d-flex justify-content-end gap-4">
+      <button nbButton status="warning"  (click)="dialogRef.close()">Cancelar</button>
+      <button nbButton status="primary"  (click)="dialogRef.close()">Confirmar</button>
+    </nb-card-footer>
+  </nb-card>

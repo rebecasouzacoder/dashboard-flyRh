@@ -1,0 +1,38 @@
+<nb-layout [windowMode]="true">
+    <nb-layout-header  fixed class="bg-primary clr-white">
+      <div class="row w-100 d-flex justify-content-between">
+        <div class="col-2 d-flex align-items-center">
+          <nb-icon class="icon-colapse clr-white"  (click)="toggle()" icon="menu-outline"></nb-icon>
+        </div>
+        <div class="col-8 d-flex align-items-center justify-content-center container-logo">
+         <img src="assets/logo.png" alt="">
+        </div>   
+        <div class="col-2 d-flex justify-content-end align-items-center clr-white">
+          <nb-user 
+          color="#ffff"
+          class="clr-white"
+          [name]="'Teste'"
+          size="small"
+          nbContextMenuTrigger="hover"
+          [nbContextMenu]="itemsMenuUser"
+          nbContextMenuTag="my-context-menu">
+          </nb-user>
+        </div>
+      </div>
+       
+      </nb-layout-header>
+      <nb-sidebar>
+        <div class="sidebar-container">
+          <nb-menu style="height: 100%;" id="menuLayout" class="c-pointer" [items]="items"></nb-menu>
+          <div class="conatiner-anx d-flex justify-content-center" *ngIf="!collapse">
+            <img style="width: 50%;" src="assets/logoanx.png" alt="">
+          </div>
+        </div>
+      </nb-sidebar>
+  
+    <nb-layout-column class="colored-column-success">
+      <router-outlet></router-outlet>
+    </nb-layout-column>
+  </nb-layout>
+
+ 

@@ -1,0 +1,14 @@
+<p>users works!</p>
+<app-card-container [title]="'Cadastro'">
+  <h1>Teste</h1>
+</app-card-container>
+<app-table
+  [columns]="columns"
+  [rowData]="rowData"
+  [loading]="loading"
+  (editEvent)="edit($event)"
+  (deleteEvent)="delet($event)"
+></app-table>
+
+<button nbButton status="primary">Primary</button>
+<button nbButton  status="warning">Warning</button>

@@ -1,0 +1,20 @@
+.table {
+    .thead-yellow {
+        tr th {
+            background-color: var(--secondary-50)!important;
+        }
+    }
+    tbody {
+        tr td.action-colum {
+            width: 50px;
+            cursor: pointer;
+
+            span {
+                nb-icon:hover {
+                    color: var(--secondary-50);
+                }
+            }
+
+        }
+    }
+}

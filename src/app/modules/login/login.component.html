@@ -1,0 +1,86 @@
+
+
+<nb-layout>
+    <nb-layout-header  fixed class="bg-primary clr-white">
+      <div class="row w-100">
+        <div class="col-12 d-flex justify-content-start">
+          <img style=" height: 20px;" src="assets/icons/logo.svg" alt="">
+        </div>
+      </div>
+    </nb-layout-header>
+      <nb-layout-column>
+          <div class="row d-flex h-100 justify-content-center align-items-center">
+              <div class="col-lg-4 col-md-8 col-sm-12">
+                <nb-card class="bg-primary p-4">
+                  <nb-card-body>
+                    <form [formGroup]="form" >
+                        <div class="row mb-5">
+                          <div class="col-12 mt-4">
+                            <input
+                              type="text"
+                              nbInput
+                              fullWidth
+                              status="primary"
+                              placeholder="Usuário"
+                              formControlName="username"
+                            />
+                            <div
+                              *ngIf="
+                                form.get('username').invalid &&
+                                (form.get('username').dirty ||
+                                  form.get('username').touched)
+                              "
+                            >
+                              <span class="text-danger" *ngIf="form.get('username').errors.required"
+                                >Usuário é obrigatório.</span
+                              >
+                            </div>
+                         
+                          </div>
+                          <div class="col-12 mt-4">
+                            <nb-form-field>
+                              <input  [type]="getInputType()" nbInput formControlName="password" fullWidth status="primary" placeholder="Senha"/>
+                              <button type="button" nbSuffix nbButton ghost (click)="toggleShowPassword()">
+                                <nb-icon class="clr-primary" [icon]="showPassword ? 'eye-off-outline' : 'eye-outline'"
+                                         pack="eva"
+                                         [attr.aria-label]="showPassword ? 'hide password' : 'show password'">
+                                </nb-icon>
+                              </button>
+                            </nb-form-field>
+                            <div
+                              *ngIf="
+                                form.get('password').invalid &&
+                                (form.get('password').dirty ||
+                                  form.get('password').touched)
+                              "
+                            >
+                              <span class="text-danger" *ngIf="form.get('password').errors.required"
+                                >Senha é obrigatória.</span
+                              >
+                            </div>
+                          </div>
+                          <div class="col-12 mt-4 justify-content-end d-flex">
+                            <button
+                              nbButton
+                              fullWidth
+                              status="warning"
+                              type="submit"
+                              [disabled]="form.invalid || isLoading"
+                              [nbSpinner]="isLoading" 
+                              nbSpinnerMessage="Carregando"
+                              (click)="login()"
+                              
+                            >
+                              {{isLoading ? '' : 'Login'}}
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                  </nb-card-body>
+                </nb-card>
+              </div>
+            </div>
+      
+      </nb-layout-column>
+  </nb-layout>
+  

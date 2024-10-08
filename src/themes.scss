@@ -1,0 +1,62 @@
+@import '@nebular/theme/styles/theming';
+@import '@nebular/theme/styles/themes/default';
+
+$nb-themes: nb-register-theme((
+  color-primary-default: #37023A,
+  color-info-default: #37023A,
+  color-primary-hover: #ffff,
+  button-filled-primary-focus-border-color: #37023A,
+  button-filled-primary-active-background-color: #37023A,
+  button-filled-primary-active-border-color: #37023A,
+  button-outline-primary-hover-border-color: #37023A,
+  button-outline-primary-focus-border-color: #37023A,
+  color-info-hover: #fff,
+  color-info-focus: #ffff,
+  color-primary-focus: #37023A,
+  color-info-focus-border: #37023A,
+  color-info-active: #37023A,
+  color-info-active-border: #37023A,
+  color-primary-transparent-default-border: #37023A,
+  color-primary-transparent-focus-border: #37023A,
+  color-primary-transparent-hover-border: #37023A,
+  color-primary-transparent-active-border: #37023A,// Cor primária (verde)
+  color-accent: #ff0000, // Cor de destaque/acento (vermelho)
+  color-info: #0000ff, // Cor de informações (azul)
+  color-success: #00ff00, // Cor de sucesso (verde)
+  color-warning: #ffff00, // Cor de aviso (amarelo)
+  color-danger: #ff0000, // Cor de perigo (vermelho)
+  color-basic: #000000, // Cor básica
+  color-primary-light: #ccffcc, 
+  text-primary-color: #37023A,
+  text-primary-hover-color: #ffff,
+  text-primary-focus-color: #37023A,
+  color-info-transparent-default-border: #37023A,
+  color-info-transparent-focus-border: #37023A,
+  color-info-transparent-hover-border: #37023A,
+  color-info-transparent-active-border: #37023A,
+  color-primary-600: #37023A,
+  color-primary-700: #37023A,
+  color-primary-400: #37023A,
+  color-primary-500: #37023A,
+  color-primary-active: #37023A,
+  color-info-600: #37023A,
+  color-info-700: #37023A,
+  color-info-400: #37023A,
+  color-info-300: #37023A,
+  color-info-500: #37023A,
+  menu-text-color: #ffff,
+  menu-item-divider-color: transparent,
+  menu-background-color: #37023A,
+  user-name-text-color: #ffff,
+  menu-item-active-background-color: #FFCA1D,
+  menu-item-hover-text-color: #37023A,
+  menu-item-hover-background-color: #FFCA1D,
+  button-filled-primary-focus-background-color: #19001a,
+  button-filled-primary-hover-background-color:#230024,
+  button-filled-warning-background-color: #FFCA1D,
+  button-filled-warning-text-color: #37023A,
+  button-filled-warning-hover-text-color: #ffff,
+  button-filled-warning-hover-background-color: #c99400,
+  button-filled-warning-hover-border-color: #ffff,
+  color-primary-transparent-default: rgba(142, 164, 142, 0.086)
+), default, default);
